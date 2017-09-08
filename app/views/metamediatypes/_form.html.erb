@@ -1,0 +1,27 @@
+<%= form_with(model: metamediatype, local: true) do |form| %>
+  <% if metamediatype.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(metamediatype.errors.count, "error") %> prohibited this metamediatype from being saved:</h2>
+
+      <ul>
+      <% metamediatype.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :mediaTypeName %>
+    <%= form.text_field :mediaTypeName, id: :metamediatype_mediaTypeName %>
+  </div>
+
+  <div class="field">
+    <%= form.label :–no-migration %>
+    <%= form.text_field :–no-migration, id: :metamediatype_–no-migration %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

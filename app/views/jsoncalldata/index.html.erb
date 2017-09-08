@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Jsoncalldata</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fileid</th>
+      <th>Callduration</th>
+      <th>Nontalktime</th>
+      <th>–no-migration</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jsoncalldata.each do |jsoncalldatum| %>
+      <tr>
+        <td><%= jsoncalldatum.FileId %></td>
+        <td><%= jsoncalldatum.callDuration %></td>
+        <td><%= jsoncalldatum.nonTalkTime %></td>
+        <td><%= jsoncalldatum.–no-migration %></td>
+        <td><%= link_to 'Show', jsoncalldatum %></td>
+        <td><%= link_to 'Edit', edit_jsoncalldatum_path(jsoncalldatum) %></td>
+        <td><%= link_to 'Destroy', jsoncalldatum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Jsoncalldatum', new_jsoncalldatum_path %>

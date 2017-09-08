@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Beepseq:</strong>
+  <%= @jsonbeepdatum.beepSeq %>
+</p>
+
+<p>
+  <strong>Filename:</strong>
+  <%= @jsonbeepdatum.FileName %>
+</p>
+
+<p>
+  <strong>Beepduration:</strong>
+  <%= @jsonbeepdatum.beepDuration %>
+</p>
+
+<%= link_to 'Edit', edit_jsonbeepdatum_path(@jsonbeepdatum) %> |
+<%= link_to 'Back', jsonbeepdata_path %>

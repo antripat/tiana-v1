@@ -1,0 +1,2 @@
+class Metacampaign < ApplicationRecord
+end

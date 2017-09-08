@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Jsoncallworddata</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Keyword</th>
+      <th>Filename</th>
+      <th>Starttime</th>
+      <th>Endtime</th>
+      <th>Speakertype</th>
+      <th>Gender</th>
+      <th>Confidence</th>
+      <th>Score</th>
+      <th>Wordseq</th>
+      <th>–no-migration</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jsoncallworddata.each do |jsoncallworddatum| %>
+      <tr>
+        <td><%= jsoncallworddatum.Keyword %></td>
+        <td><%= jsoncallworddatum.FileName %></td>
+        <td><%= jsoncallworddatum.startTime %></td>
+        <td><%= jsoncallworddatum.endTime %></td>
+        <td><%= jsoncallworddatum.speakerType %></td>
+        <td><%= jsoncallworddatum.gender %></td>
+        <td><%= jsoncallworddatum.confidence %></td>
+        <td><%= jsoncallworddatum.score %></td>
+        <td><%= jsoncallworddatum.wordSeq %></td>
+        <td><%= jsoncallworddatum.–no-migration %></td>
+        <td><%= link_to 'Show', jsoncallworddatum %></td>
+        <td><%= link_to 'Edit', edit_jsoncallworddatum_path(jsoncallworddatum) %></td>
+        <td><%= link_to 'Destroy', jsoncallworddatum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Jsoncallworddatum', new_jsoncallworddatum_path %>

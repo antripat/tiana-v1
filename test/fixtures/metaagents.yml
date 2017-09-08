@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  agentId: MyString
+  firstName: MyString
+  lastName: MyString
+  teamId: MyString
+  teamName: MyString
+  –no-migration: MyString
+
+two:
+  agentId: MyString
+  firstName: MyString
+  lastName: MyString
+  teamId: MyString
+  teamName: MyString
+  –no-migration: MyString

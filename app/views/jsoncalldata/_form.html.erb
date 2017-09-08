@@ -1,0 +1,37 @@
+<%= form_with(model: jsoncalldatum, local: true) do |form| %>
+  <% if jsoncalldatum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(jsoncalldatum.errors.count, "error") %> prohibited this jsoncalldatum from being saved:</h2>
+
+      <ul>
+      <% jsoncalldatum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :FileId %>
+    <%= form.text_field :FileId, id: :jsoncalldatum_FileId %>
+  </div>
+
+  <div class="field">
+    <%= form.label :callDuration %>
+    <%= form.text_field :callDuration, id: :jsoncalldatum_callDuration %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nonTalkTime %>
+    <%= form.text_field :nonTalkTime, id: :jsoncalldatum_nonTalkTime %>
+  </div>
+
+  <div class="field">
+    <%= form.label :–no-migration %>
+    <%= form.text_field :–no-migration, id: :jsoncalldatum_–no-migration %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

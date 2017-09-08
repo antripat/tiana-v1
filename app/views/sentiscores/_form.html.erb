@@ -1,0 +1,27 @@
+<%= form_with(model: sentiscore, local: true) do |form| %>
+  <% if sentiscore.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sentiscore.errors.count, "error") %> prohibited this sentiscore from being saved:</h2>
+
+      <ul>
+      <% sentiscore.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :SentiScore %>
+    <%= form.number_field :SentiScore, id: :sentiscore_SentiScore %>
+  </div>
+
+  <div class="field">
+    <%= form.label :–no-migration %>
+    <%= form.text_field :–no-migration, id: :sentiscore_–no-migration %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

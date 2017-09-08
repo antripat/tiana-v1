@@ -1,0 +1,207 @@
+<%= form_with(model: metacallstat, local: true) do |form| %>
+  <% if metacallstat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(metacallstat.errors.count, "error") %> prohibited this metacallstat from being saved:</h2>
+
+      <ul>
+      <% metacallstat.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :ID %>
+    <%= form.number_field :ID, id: :metacallstat_ID %>
+  </div>
+
+  <div class="field">
+    <%= form.label :abandoned %>
+    <%= form.text_field :abandoned, id: :metacallstat_abandoned %>
+  </div>
+
+  <div class="field">
+    <%= form.label :abandonSeconds %>
+    <%= form.number_field :abandonSeconds, id: :metacallstat_abandonSeconds %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ACWSeconds %>
+    <%= form.number_field :ACWSeconds, id: :metacallstat_ACWSeconds %>
+  </div>
+
+  <div class="field">
+    <%= form.label :agentId %>
+    <%= form.text_field :agentId, id: :metacallstat_agentId %>
+  </div>
+
+  <div class="field">
+    <%= form.label :agentSeconds %>
+    <%= form.number_field :agentSeconds, id: :metacallstat_agentSeconds %>
+  </div>
+
+  <div class="field">
+    <%= form.label :callbackTime %>
+    <%= form.number_field :callbackTime, id: :metacallstat_callbackTime %>
+  </div>
+
+  <div class="field">
+    <%= form.label :campaignId %>
+    <%= form.text_field :campaignId, id: :metacallstat_campaignId %>
+  </div>
+
+  <div class="field">
+    <%= form.label :confSeconds %>
+    <%= form.number_field :confSeconds, id: :metacallstat_confSeconds %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contactStart %>
+    <%= form.datetime_select :contactStart, id: :metacallstat_contactStart %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dateACWWarehoused %>
+    <%= form.datetime_select :dateACWWarehoused, id: :metacallstat_dateACWWarehoused %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dateContactWarehoused %>
+    <%= form.datetime_select :dateContactWarehoused, id: :metacallstat_dateContactWarehoused %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dispositionNotes %>
+    <%= form.text_field :dispositionNotes, id: :metacallstat_dispositionNotes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :holdCount %>
+    <%= form.number_field :holdCount, id: :metacallstat_holdCount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :holdSeconds %>
+    <%= form.number_field :holdSeconds, id: :metacallstat_holdSeconds %>
+  </div>
+
+  <div class="field">
+    <%= form.label :NPSscore %>
+    <%= form.number_field :NPSscore, id: :metacallstat_NPSscore %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inQueueSeconds %>
+    <%= form.number_field :inQueueSeconds, id: :metacallstat_inQueueSeconds %>
+  </div>
+
+  <div class="field">
+    <%= form.label :isLogged %>
+    <%= form.text_field :isLogged, id: :metacallstat_isLogged %>
+  </div>
+
+  <div class="field">
+    <%= form.label :isOutbound %>
+    <%= form.text_field :isOutbound, id: :metacallstat_isOutbound %>
+  </div>
+
+  <div class="field">
+    <%= form.label :isRefused %>
+    <%= form.text_field :isRefused, id: :metacallstat_isRefused %>
+  </div>
+
+  <div class="field">
+    <%= form.label :isShortAbandon %>
+    <%= form.text_field :isShortAbandon, id: :metacallstat_isShortAbandon %>
+  </div>
+
+  <div class="field">
+    <%= form.label :isTakeover %>
+    <%= form.text_field :isTakeover, id: :metacallstat_isTakeover %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lastUpdateTime %>
+    <%= form.datetime_select :lastUpdateTime, id: :metacallstat_lastUpdateTime %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mediaType %>
+    <%= form.number_field :mediaType, id: :metacallstat_mediaType %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pointOfContactId %>
+    <%= form.text_field :pointOfContactId, id: :metacallstat_pointOfContactId %>
+  </div>
+
+  <div class="field">
+    <%= form.label :postQueueSeconds %>
+    <%= form.number_field :postQueueSeconds, id: :metacallstat_postQueueSeconds %>
+  </div>
+
+  <div class="field">
+    <%= form.label :preQueueSeconds %>
+    <%= form.number_field :preQueueSeconds, id: :metacallstat_preQueueSeconds %>
+  </div>
+
+  <div class="field">
+    <%= form.label :primaryDispositionId %>
+    <%= form.text_field :primaryDispositionId, id: :metacallstat_primaryDispositionId %>
+  </div>
+
+  <div class="field">
+    <%= form.label :refuseReason %>
+    <%= form.text_field :refuseReason, id: :metacallstat_refuseReason %>
+  </div>
+
+  <div class="field">
+    <%= form.label :refuseTime %>
+    <%= form.datetime_select :refuseTime, id: :metacallstat_refuseTime %>
+  </div>
+
+  <div class="field">
+    <%= form.label :releaseSeconds %>
+    <%= form.number_field :releaseSeconds, id: :metacallstat_releaseSeconds %>
+  </div>
+
+  <div class="field">
+    <%= form.label :routingTime %>
+    <%= form.number_field :routingTime, id: :metacallstat_routingTime %>
+  </div>
+
+  <div class="field">
+    <%= form.label :secondaryDispositionId %>
+    <%= form.text_field :secondaryDispositionId, id: :metacallstat_secondaryDispositionId %>
+  </div>
+
+  <div class="field">
+    <%= form.label :serviceLevelFlag %>
+    <%= form.number_field :serviceLevelFlag, id: :metacallstat_serviceLevelFlag %>
+  </div>
+
+  <div class="field">
+    <%= form.label :skillId %>
+    <%= form.text_field :skillId, id: :metacallstat_skillId %>
+  </div>
+
+  <div class="field">
+    <%= form.label :totalDurationSeconds %>
+    <%= form.number_field :totalDurationSeconds, id: :metacallstat_totalDurationSeconds %>
+  </div>
+
+  <div class="field">
+    <%= form.label :transferIndicatorId %>
+    <%= form.number_field :transferIndicatorId, id: :metacallstat_transferIndicatorId %>
+  </div>
+
+  <div class="field">
+    <%= form.label :–no-migration %>
+    <%= form.text_field :–no-migration, id: :metacallstat_–no-migration %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

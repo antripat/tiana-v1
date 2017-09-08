@@ -1,0 +1,2 @@
+class Metaagent < ApplicationRecord
+end

@@ -1,0 +1,32 @@
+<%= form_with(model: sentitrigram, local: true) do |form| %>
+  <% if sentitrigram.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sentitrigram.errors.count, "error") %> prohibited this sentitrigram from being saved:</h2>
+
+      <ul>
+      <% sentitrigram.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :FileName %>
+    <%= form.text_field :FileName, id: :sentitrigram_FileName %>
+  </div>
+
+  <div class="field">
+    <%= form.label :TriGram %>
+    <%= form.text_field :TriGram, id: :sentitrigram_TriGram %>
+  </div>
+
+  <div class="field">
+    <%= form.label :TriGramScore %>
+    <%= form.number_field :TriGramScore, id: :sentitrigram_TriGramScore %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

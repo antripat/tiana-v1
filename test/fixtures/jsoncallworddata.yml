@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Keyword: MyString
+  FileName: MyString
+  startTime: 9.99
+  endTime: 9.99
+  speakerType: MyString
+  gender: MyString
+  confidence: 9.99
+  score: 9.99
+  wordSeq: 1
+  –no-migration: MyString
+
+two:
+  Keyword: MyString
+  FileName: MyString
+  startTime: 9.99
+  endTime: 9.99
+  speakerType: MyString
+  gender: MyString
+  confidence: 9.99
+  score: 9.99
+  wordSeq: 1
+  –no-migration: MyString

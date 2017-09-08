@@ -1,0 +1,101 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Metacallstats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Abandoned</th>
+      <th>Abandonseconds</th>
+      <th>Acwseconds</th>
+      <th>Agentid</th>
+      <th>Agentseconds</th>
+      <th>Callbacktime</th>
+      <th>Campaignid</th>
+      <th>Confseconds</th>
+      <th>Contactstart</th>
+      <th>Dateacwwarehoused</th>
+      <th>Datecontactwarehoused</th>
+      <th>Dispositionnotes</th>
+      <th>Holdcount</th>
+      <th>Holdseconds</th>
+      <th>Npsscore</th>
+      <th>Inqueueseconds</th>
+      <th>Islogged</th>
+      <th>Isoutbound</th>
+      <th>Isrefused</th>
+      <th>Isshortabandon</th>
+      <th>Istakeover</th>
+      <th>Lastupdatetime</th>
+      <th>Mediatype</th>
+      <th>Pointofcontactid</th>
+      <th>Postqueueseconds</th>
+      <th>Prequeueseconds</th>
+      <th>Primarydispositionid</th>
+      <th>Refusereason</th>
+      <th>Refusetime</th>
+      <th>Releaseseconds</th>
+      <th>Routingtime</th>
+      <th>Secondarydispositionid</th>
+      <th>Servicelevelflag</th>
+      <th>Skillid</th>
+      <th>Totaldurationseconds</th>
+      <th>Transferindicatorid</th>
+      <th>–no-migration</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @metacallstats.each do |metacallstat| %>
+      <tr>
+        <td><%= metacallstat.ID %></td>
+        <td><%= metacallstat.abandoned %></td>
+        <td><%= metacallstat.abandonSeconds %></td>
+        <td><%= metacallstat.ACWSeconds %></td>
+        <td><%= metacallstat.agentId %></td>
+        <td><%= metacallstat.agentSeconds %></td>
+        <td><%= metacallstat.callbackTime %></td>
+        <td><%= metacallstat.campaignId %></td>
+        <td><%= metacallstat.confSeconds %></td>
+        <td><%= metacallstat.contactStart %></td>
+        <td><%= metacallstat.dateACWWarehoused %></td>
+        <td><%= metacallstat.dateContactWarehoused %></td>
+        <td><%= metacallstat.dispositionNotes %></td>
+        <td><%= metacallstat.holdCount %></td>
+        <td><%= metacallstat.holdSeconds %></td>
+        <td><%= metacallstat.NPSscore %></td>
+        <td><%= metacallstat.inQueueSeconds %></td>
+        <td><%= metacallstat.isLogged %></td>
+        <td><%= metacallstat.isOutbound %></td>
+        <td><%= metacallstat.isRefused %></td>
+        <td><%= metacallstat.isShortAbandon %></td>
+        <td><%= metacallstat.isTakeover %></td>
+        <td><%= metacallstat.lastUpdateTime %></td>
+        <td><%= metacallstat.mediaType %></td>
+        <td><%= metacallstat.pointOfContactId %></td>
+        <td><%= metacallstat.postQueueSeconds %></td>
+        <td><%= metacallstat.preQueueSeconds %></td>
+        <td><%= metacallstat.primaryDispositionId %></td>
+        <td><%= metacallstat.refuseReason %></td>
+        <td><%= metacallstat.refuseTime %></td>
+        <td><%= metacallstat.releaseSeconds %></td>
+        <td><%= metacallstat.routingTime %></td>
+        <td><%= metacallstat.secondaryDispositionId %></td>
+        <td><%= metacallstat.serviceLevelFlag %></td>
+        <td><%= metacallstat.skillId %></td>
+        <td><%= metacallstat.totalDurationSeconds %></td>
+        <td><%= metacallstat.transferIndicatorId %></td>
+        <td><%= metacallstat.–no-migration %></td>
+        <td><%= link_to 'Show', metacallstat %></td>
+        <td><%= link_to 'Edit', edit_metacallstat_path(metacallstat) %></td>
+        <td><%= link_to 'Destroy', metacallstat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Metacallstat', new_metacallstat_path %>

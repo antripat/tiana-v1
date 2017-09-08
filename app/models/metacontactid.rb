@@ -1,0 +1,2 @@
+class Metacontactid < ApplicationRecord
+end

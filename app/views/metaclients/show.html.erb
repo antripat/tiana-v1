@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fromaddr:</strong>
+  <%= @metaclient.fromAddr %>
+</p>
+
+<p>
+  <strong>Toaddr:</strong>
+  <%= @metaclient.toAddr %>
+</p>
+
+<p>
+  <strong>–no-migration:</strong>
+  <%= @metaclient.–no-migration %>
+</p>
+
+<%= link_to 'Edit', edit_metaclient_path(@metaclient) %> |
+<%= link_to 'Back', metaclients_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  FileName: MyString
+  FourGram: MyString
+  FourGramScore: 1
+  –no-migration: MyString
+
+two:
+  FileName: MyString
+  FourGram: MyString
+  FourGramScore: 1
+  –no-migration: MyString

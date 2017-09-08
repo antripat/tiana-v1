@@ -1,0 +1,2 @@
+class Jsoncalldatum < ApplicationRecord
+end

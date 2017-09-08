@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Jsonbeepdata</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Beepseq</th>
+      <th>Filename</th>
+      <th>Beepduration</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jsonbeepdata.each do |jsonbeepdatum| %>
+      <tr>
+        <td><%= jsonbeepdatum.beepSeq %></td>
+        <td><%= jsonbeepdatum.FileName %></td>
+        <td><%= jsonbeepdatum.beepDuration %></td>
+        <td><%= link_to 'Show', jsonbeepdatum %></td>
+        <td><%= link_to 'Edit', edit_jsonbeepdatum_path(jsonbeepdatum) %></td>
+        <td><%= link_to 'Destroy', jsonbeepdatum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Jsonbeepdatum', new_jsonbeepdatum_path %>

@@ -1,0 +1,2 @@
+module JsonbeepdataHelper
+end

@@ -1,0 +1,27 @@
+<%= form_with(model: metaskill, local: true) do |form| %>
+  <% if metaskill.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(metaskill.errors.count, "error") %> prohibited this metaskill from being saved:</h2>
+
+      <ul>
+      <% metaskill.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :skillName %>
+    <%= form.text_field :skillName, id: :metaskill_skillName %>
+  </div>
+
+  <div class="field">
+    <%= form.label :–no-migration %>
+    <%= form.text_field :–no-migration, id: :metaskill_–no-migration %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+class Sentitrigram < ApplicationRecord
+end

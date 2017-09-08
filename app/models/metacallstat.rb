@@ -1,0 +1,2 @@
+class Metacallstat < ApplicationRecord
+end

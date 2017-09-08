@@ -1,0 +1,32 @@
+<%= form_with(model: metaclient, local: true) do |form| %>
+  <% if metaclient.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(metaclient.errors.count, "error") %> prohibited this metaclient from being saved:</h2>
+
+      <ul>
+      <% metaclient.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :fromAddr %>
+    <%= form.text_field :fromAddr, id: :metaclient_fromAddr %>
+  </div>
+
+  <div class="field">
+    <%= form.label :toAddr %>
+    <%= form.text_field :toAddr, id: :metaclient_toAddr %>
+  </div>
+
+  <div class="field">
+    <%= form.label :–no-migration %>
+    <%= form.text_field :–no-migration, id: :metaclient_–no-migration %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

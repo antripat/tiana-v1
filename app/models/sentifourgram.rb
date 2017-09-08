@@ -1,0 +1,2 @@
+class Sentifourgram < ApplicationRecord
+end

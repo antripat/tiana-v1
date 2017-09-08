@@ -1,0 +1,67 @@
+<%= form_with(model: jsoncallworddatum, local: true) do |form| %>
+  <% if jsoncallworddatum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(jsoncallworddatum.errors.count, "error") %> prohibited this jsoncallworddatum from being saved:</h2>
+
+      <ul>
+      <% jsoncallworddatum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Keyword %>
+    <%= form.text_field :Keyword, id: :jsoncallworddatum_Keyword %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FileName %>
+    <%= form.text_field :FileName, id: :jsoncallworddatum_FileName %>
+  </div>
+
+  <div class="field">
+    <%= form.label :startTime %>
+    <%= form.text_field :startTime, id: :jsoncallworddatum_startTime %>
+  </div>
+
+  <div class="field">
+    <%= form.label :endTime %>
+    <%= form.text_field :endTime, id: :jsoncallworddatum_endTime %>
+  </div>
+
+  <div class="field">
+    <%= form.label :speakerType %>
+    <%= form.text_field :speakerType, id: :jsoncallworddatum_speakerType %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gender %>
+    <%= form.text_field :gender, id: :jsoncallworddatum_gender %>
+  </div>
+
+  <div class="field">
+    <%= form.label :confidence %>
+    <%= form.text_field :confidence, id: :jsoncallworddatum_confidence %>
+  </div>
+
+  <div class="field">
+    <%= form.label :score %>
+    <%= form.text_field :score, id: :jsoncallworddatum_score %>
+  </div>
+
+  <div class="field">
+    <%= form.label :wordSeq %>
+    <%= form.number_field :wordSeq, id: :jsoncallworddatum_wordSeq %>
+  </div>
+
+  <div class="field">
+    <%= form.label :–no-migration %>
+    <%= form.text_field :–no-migration, id: :jsoncallworddatum_–no-migration %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

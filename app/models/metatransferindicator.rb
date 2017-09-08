@@ -1,0 +1,2 @@
+class Metatransferindicator < ApplicationRecord
+end

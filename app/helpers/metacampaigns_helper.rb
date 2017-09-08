@@ -1,0 +1,2 @@
+module MetacampaignsHelper
+end

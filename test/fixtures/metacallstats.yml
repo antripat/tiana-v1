@@ -1,0 +1,81 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ID: 1
+  abandoned: MyString
+  abandonSeconds: 1
+  ACWSeconds: 1
+  agentId: MyString
+  agentSeconds: 1
+  callbackTime: 1
+  campaignId: MyString
+  confSeconds: 1
+  contactStart: 2017-09-08 22:06:59
+  dateACWWarehoused: 2017-09-08 22:06:59
+  dateContactWarehoused: 2017-09-08 22:06:59
+  dispositionNotes: MyString
+  holdCount: 1
+  holdSeconds: 1
+  NPSscore: 1
+  inQueueSeconds: 1
+  isLogged: MyString
+  isOutbound: MyString
+  isRefused: MyString
+  isShortAbandon: MyString
+  isTakeover: MyString
+  lastUpdateTime: 2017-09-08 22:06:59
+  mediaType: 1
+  pointOfContactId: MyString
+  postQueueSeconds: 1
+  preQueueSeconds: 1
+  primaryDispositionId: MyString
+  refuseReason: MyString
+  refuseTime: 2017-09-08 22:06:59
+  releaseSeconds: 1
+  routingTime: 1
+  secondaryDispositionId: MyString
+  serviceLevelFlag: 1
+  skillId: MyString
+  totalDurationSeconds: 1
+  transferIndicatorId: 1
+  –no-migration: MyString
+
+two:
+  ID: 1
+  abandoned: MyString
+  abandonSeconds: 1
+  ACWSeconds: 1
+  agentId: MyString
+  agentSeconds: 1
+  callbackTime: 1
+  campaignId: MyString
+  confSeconds: 1
+  contactStart: 2017-09-08 22:06:59
+  dateACWWarehoused: 2017-09-08 22:06:59
+  dateContactWarehoused: 2017-09-08 22:06:59
+  dispositionNotes: MyString
+  holdCount: 1
+  holdSeconds: 1
+  NPSscore: 1
+  inQueueSeconds: 1
+  isLogged: MyString
+  isOutbound: MyString
+  isRefused: MyString
+  isShortAbandon: MyString
+  isTakeover: MyString
+  lastUpdateTime: 2017-09-08 22:06:59
+  mediaType: 1
+  pointOfContactId: MyString
+  postQueueSeconds: 1
+  preQueueSeconds: 1
+  primaryDispositionId: MyString
+  refuseReason: MyString
+  refuseTime: 2017-09-08 22:06:59
+  releaseSeconds: 1
+  routingTime: 1
+  secondaryDispositionId: MyString
+  serviceLevelFlag: 1
+  skillId: MyString
+  totalDurationSeconds: 1
+  transferIndicatorId: 1
+  –no-migration: MyString

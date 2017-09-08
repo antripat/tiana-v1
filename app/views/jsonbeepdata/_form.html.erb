@@ -1,0 +1,32 @@
+<%= form_with(model: jsonbeepdatum, local: true) do |form| %>
+  <% if jsonbeepdatum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(jsonbeepdatum.errors.count, "error") %> prohibited this jsonbeepdatum from being saved:</h2>
+
+      <ul>
+      <% jsonbeepdatum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :beepSeq %>
+    <%= form.number_field :beepSeq, id: :jsonbeepdatum_beepSeq %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FileName %>
+    <%= form.text_field :FileName, id: :jsonbeepdatum_FileName %>
+  </div>
+
+  <div class="field">
+    <%= form.label :beepDuration %>
+    <%= form.text_field :beepDuration, id: :jsonbeepdatum_beepDuration %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

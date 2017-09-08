@@ -1,0 +1,2 @@
+class Sentiscore < ApplicationRecord
+end

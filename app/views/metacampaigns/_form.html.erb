@@ -1,0 +1,27 @@
+<%= form_with(model: metacampaign, local: true) do |form| %>
+  <% if metacampaign.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(metacampaign.errors.count, "error") %> prohibited this metacampaign from being saved:</h2>
+
+      <ul>
+      <% metacampaign.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :campaignName %>
+    <%= form.text_field :campaignName, id: :metacampaign_campaignName %>
+  </div>
+
+  <div class="field">
+    <%= form.label :–no-migration %>
+    <%= form.text_field :–no-migration, id: :metacampaign_–no-migration %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

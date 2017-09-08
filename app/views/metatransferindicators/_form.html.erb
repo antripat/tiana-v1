@@ -1,0 +1,27 @@
+<%= form_with(model: metatransferindicator, local: true) do |form| %>
+  <% if metatransferindicator.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(metatransferindicator.errors.count, "error") %> prohibited this metatransferindicator from being saved:</h2>
+
+      <ul>
+      <% metatransferindicator.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :transferIndicatorName %>
+    <%= form.text_field :transferIndicatorName, id: :metatransferindicator_transferIndicatorName %>
+  </div>
+
+  <div class="field">
+    <%= form.label :–no-migration %>
+    <%= form.text_field :–no-migration, id: :metatransferindicator_–no-migration %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

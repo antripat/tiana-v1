@@ -1,0 +1,2 @@
+module MetapointofcontactsHelper
+end

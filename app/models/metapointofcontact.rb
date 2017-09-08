@@ -1,0 +1,2 @@
+class Metapointofcontact < ApplicationRecord
+end

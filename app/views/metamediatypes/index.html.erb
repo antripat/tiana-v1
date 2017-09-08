@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Metamediatypes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mediatypename</th>
+      <th>–no-migration</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @metamediatypes.each do |metamediatype| %>
+      <tr>
+        <td><%= metamediatype.mediaTypeName %></td>
+        <td><%= metamediatype.–no-migration %></td>
+        <td><%= link_to 'Show', metamediatype %></td>
+        <td><%= link_to 'Edit', edit_metamediatype_path(metamediatype) %></td>
+        <td><%= link_to 'Destroy', metamediatype, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Metamediatype', new_metamediatype_path %>

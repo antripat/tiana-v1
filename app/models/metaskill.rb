@@ -1,0 +1,2 @@
+class Metaskill < ApplicationRecord
+end

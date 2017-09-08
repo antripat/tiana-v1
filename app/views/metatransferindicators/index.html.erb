@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Metatransferindicators</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Transferindicatorname</th>
+      <th>–no-migration</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @metatransferindicators.each do |metatransferindicator| %>
+      <tr>
+        <td><%= metatransferindicator.transferIndicatorName %></td>
+        <td><%= metatransferindicator.–no-migration %></td>
+        <td><%= link_to 'Show', metatransferindicator %></td>
+        <td><%= link_to 'Edit', edit_metatransferindicator_path(metatransferindicator) %></td>
+        <td><%= link_to 'Destroy', metatransferindicator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Metatransferindicator', new_metatransferindicator_path %>

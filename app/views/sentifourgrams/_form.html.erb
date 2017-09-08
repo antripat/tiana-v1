@@ -1,0 +1,37 @@
+<%= form_with(model: sentifourgram, local: true) do |form| %>
+  <% if sentifourgram.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sentifourgram.errors.count, "error") %> prohibited this sentifourgram from being saved:</h2>
+
+      <ul>
+      <% sentifourgram.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :FileName %>
+    <%= form.text_field :FileName, id: :sentifourgram_FileName %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FourGram %>
+    <%= form.text_field :FourGram, id: :sentifourgram_FourGram %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FourGramScore %>
+    <%= form.number_field :FourGramScore, id: :sentifourgram_FourGramScore %>
+  </div>
+
+  <div class="field">
+    <%= form.label :–no-migration %>
+    <%= form.text_field :–no-migration, id: :sentifourgram_–no-migration %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

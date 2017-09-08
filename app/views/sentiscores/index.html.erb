@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sentiscores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sentiscore</th>
+      <th>–no-migration</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sentiscores.each do |sentiscore| %>
+      <tr>
+        <td><%= sentiscore.SentiScore %></td>
+        <td><%= sentiscore.–no-migration %></td>
+        <td><%= link_to 'Show', sentiscore %></td>
+        <td><%= link_to 'Edit', edit_sentiscore_path(sentiscore) %></td>
+        <td><%= link_to 'Destroy', sentiscore, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sentiscore', new_sentiscore_path %>

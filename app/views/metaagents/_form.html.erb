@@ -1,0 +1,47 @@
+<%= form_with(model: metaagent, local: true) do |form| %>
+  <% if metaagent.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(metaagent.errors.count, "error") %> prohibited this metaagent from being saved:</h2>
+
+      <ul>
+      <% metaagent.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :agentId %>
+    <%= form.text_field :agentId, id: :metaagent_agentId %>
+  </div>
+
+  <div class="field">
+    <%= form.label :firstName %>
+    <%= form.text_field :firstName, id: :metaagent_firstName %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lastName %>
+    <%= form.text_field :lastName, id: :metaagent_lastName %>
+  </div>
+
+  <div class="field">
+    <%= form.label :teamId %>
+    <%= form.text_field :teamId, id: :metaagent_teamId %>
+  </div>
+
+  <div class="field">
+    <%= form.label :teamName %>
+    <%= form.text_field :teamName, id: :metaagent_teamName %>
+  </div>
+
+  <div class="field">
+    <%= form.label :–no-migration %>
+    <%= form.text_field :–no-migration, id: :metaagent_–no-migration %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

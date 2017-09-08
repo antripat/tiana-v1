@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Metaskills</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Skillname</th>
+      <th>–no-migration</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @metaskills.each do |metaskill| %>
+      <tr>
+        <td><%= metaskill.skillName %></td>
+        <td><%= metaskill.–no-migration %></td>
+        <td><%= link_to 'Show', metaskill %></td>
+        <td><%= link_to 'Edit', edit_metaskill_path(metaskill) %></td>
+        <td><%= link_to 'Destroy', metaskill, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Metaskill', new_metaskill_path %>

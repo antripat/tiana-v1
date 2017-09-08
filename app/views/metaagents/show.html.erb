@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Agentid:</strong>
+  <%= @metaagent.agentId %>
+</p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @metaagent.firstName %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @metaagent.lastName %>
+</p>
+
+<p>
+  <strong>Teamid:</strong>
+  <%= @metaagent.teamId %>
+</p>
+
+<p>
+  <strong>Teamname:</strong>
+  <%= @metaagent.teamName %>
+</p>
+
+<p>
+  <strong>–no-migration:</strong>
+  <%= @metaagent.–no-migration %>
+</p>
+
+<%= link_to 'Edit', edit_metaagent_path(@metaagent) %> |
+<%= link_to 'Back', metaagents_path %>

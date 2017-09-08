@@ -1,0 +1,27 @@
+<%= form_with(model: metacontactid, local: true) do |form| %>
+  <% if metacontactid.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(metacontactid.errors.count, "error") %> prohibited this metacontactid from being saved:</h2>
+
+      <ul>
+      <% metacontactid.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :masterContactId %>
+    <%= form.text_field :masterContactId, id: :metacontactid_masterContactId %>
+  </div>
+
+  <div class="field">
+    <%= form.label :–no-migration %>
+    <%= form.text_field :–no-migration, id: :metacontactid_–no-migration %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

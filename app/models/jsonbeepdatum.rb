@@ -1,0 +1,2 @@
+class Jsonbeepdatum < ApplicationRecord
+end

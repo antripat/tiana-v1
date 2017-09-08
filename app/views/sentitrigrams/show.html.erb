@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Filename:</strong>
+  <%= @sentitrigram.FileName %>
+</p>
+
+<p>
+  <strong>Trigram:</strong>
+  <%= @sentitrigram.TriGram %>
+</p>
+
+<p>
+  <strong>Trigramscore:</strong>
+  <%= @sentitrigram.TriGramScore %>
+</p>
+
+<%= link_to 'Edit', edit_sentitrigram_path(@sentitrigram) %> |
+<%= link_to 'Back', sentitrigrams_path %>
