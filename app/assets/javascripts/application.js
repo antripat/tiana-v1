@@ -12,4 +12,15 @@
 //
 //= require rails-ujs
 //= require turbolinks
+//= require jquery
 //= require_tree .
+//= require jquery-ui
+//= require highcharts/highcharts
+//= require highcharts/highcharts-more
+//= require highcharts/highstock
+//= require jqcloud
+
+$(function (){
+        $('#start_date').datepicker({dateFormat: 'yy-mm-dd'});
+        $('#end_date').datepicker({dateFormat: 'yy-mm-dd'});
+});

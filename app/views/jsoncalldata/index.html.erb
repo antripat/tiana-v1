@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Filename</th>
       <th>Fileid</th>
       <th>Callduration</th>
       <th>Nontalktime</th>
@@ -16,10 +17,10 @@
   <tbody>
     <% @jsoncalldata.each do |jsoncalldatum| %>
       <tr>
+        <td><%= jsoncalldatum.FileName %></td>
         <td><%= jsoncalldatum.FileId %></td>
         <td><%= jsoncalldatum.callDuration %></td>
         <td><%= jsoncalldatum.nonTalkTime %></td>
-        <td><%= jsoncalldatum.–no-migration %></td>
         <td><%= link_to 'Show', jsoncalldatum %></td>
         <td><%= link_to 'Edit', edit_jsoncalldatum_path(jsoncalldatum) %></td>
         <td><%= link_to 'Destroy', jsoncalldatum, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :sentitrigrams
-  resources :sentiscores
+  resources :sentiscores do
+    get :render_phrase, on: :collection
+  end
   resources :sentifourgrams
   resources :metatransferindicators
   resources :metaskills

@@ -1,12 +1,26 @@
+<script type="text/javascript">
+  var word_array_temp =  <%= raw @tag_cloud.to_json %> ;
+  // console.log(word_array);
+  $(function() {
+    // When DOM is ready, select the container element and call
+    // the jQCloud method, passing the array of words as the first argument.
+    $("#phrase_cloud_container").jQCloud(word_array_temp);
+  });
+</script>
+
+
+
 <p id="notice"><%= notice %></p>
 
-<h1>Sentiscores</h1>
+<div><%= render 'filter'%></div>
+
+<h1>Sentiment Score Table</h1>
 
 <table>
   <thead>
     <tr>
+      <th>CallID</th>
       <th>Sentiscore</th>
-      <th>–no-migration</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,8 +28,8 @@
   <tbody>
     <% @sentiscores.each do |sentiscore| %>
       <tr>
+        <td><%= sentiscore.FileName %></td>
         <td><%= sentiscore.SentiScore %></td>
-        <td><%= sentiscore.–no-migration %></td>
         <td><%= link_to 'Show', sentiscore %></td>
         <td><%= link_to 'Edit', edit_sentiscore_path(sentiscore) %></td>
         <td><%= link_to 'Destroy', sentiscore, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -23,6 +37,97 @@
     <% end %>
   </tbody>
 </table>
+
+
+<h1>Customer Sentiment</h1>
+<div id=senti_score_chart_container></div>
+
+
+<script type="text/javascript">
+// $(document).ready( function() {
+  // var sentiChart = $("#senti_score_chart_container").highcharts();
+  var countSentiScore_temp = <%=raw @count_senti_score.to_json %>;
+  var countSentiScore = JSON.parse(JSON.stringify(countSentiScore_temp));
+  $("#senti_score_chart_container").highcharts({
+    chart :{defaultSeriesType: "bar", borderColor: '#EBBA95', borderWidth: 2, height: 150, spacing: [0,0,0,0]},
+    title: {text: "Customer Sentiment Chart"},
+    xAxis: {categories: "null", reversed: false, labels: {step:1}, visible: false},
+    xAxis:{categories: "null",opposite:true, reversed:false, linkedTo:0,labels:{step:1}, visible: false},
+    yAxis:{reversedStacks: true, visible: false, maxPadding: 0.00},
+    plotOptions:{series:{stacking: 'normal', cursor: 'pointer', events: {
+      click: function (){
+
+                  $.ajax({
+                  type: 'GET',
+                  url: '/sentiscores/render_phrase',
+                  data: {'senti_score': this.options.series},
+                  // async: false,
+                  success: function(word_array){
+                    // var test_array = <%= raw @tag_cloud_temp.to_json%>;
+
+                    // var elem = document.getElementById('phrase_cloud_container');
+                    // elem.parentNode.removeChild(elem);
+                    console.log("Success!!");
+                    $("#phrase_cloud_container").empty();
+                    // $("#phrase_cloud_container").jQCloud('');
+                    // var word_array =  <%= raw @tag_cloud_temp.to_json %> ;
+                    // console.log(test_array[0]['text']);
+                    //var word_array_temp = <%= raw @tag_cloud_temp.to_json %> ;
+                    // var word_array_temp = [{text: 'Hello', weight: 1000},{text: 'World!', weight: 1100}];
+                    // console.log(word_array_temp[1]['text']);
+                    $("#phrase_cloud_container").jQCloud(word_array);
+                  },
+                  error: function(exception){console.log("Error! : "+exception);}
+                })
+                        }
+                    }
+                  }
+                },
+    series:[{
+      name: '5', color:'#006203',  data: [countSentiScore["5"]]
+    },{
+      name: '4', color: '#0f9200', data: [countSentiScore["4"]]
+    },{
+      name: '3', color: '#30cb00', data: [countSentiScore["3"]]
+    },{
+      name: '2', color: '#4ae54a',data: [countSentiScore["2"]]
+    },{
+      name: '1', color: '#a4fba6', data: [countSentiScore["1"]]
+    },{
+      name: '0', color: '#808080', data: [countSentiScore["0"]]
+    },{
+      name: '-5', color: '#801717', data: [countSentiScore["-5"]*-1], legendIndex: 11
+    },{
+      name: '-4', color: '#981d1d', data: [countSentiScore["-4"]*-1], legendIndex: 10
+    },{
+      name: '-3', color: '#a01c1c', data: [countSentiScore["-3"]*-1], legendIndex: 9
+    },{
+      name: '-2', color: '#bc2626', data: [countSentiScore["-2"]*-1], legendIndex: 8
+    },{
+      name: '-1', color: '#e12f2f', data: [countSentiScore["-1"]*-1]
+    }],
+    // series:[{name: '4', color: '#0f9200', data: [countSentiScore["4"]]}],
+    // series:[{name: '3', color: '#30cb00', data: [countSentiScore["3"]]}],
+    // series:[{name: '2', color: '#4ae54a',data: [countSentiScore["2"]]}],
+    // series:[{name: '1', color: '#a4fba6', data: [countSentiScore["1"]]}],
+    // series:[{name: '0', color: '#808080', data: [countSentiScore["0"]]}],
+    // series:{name: '-5', color: '#801717', data: [countSentiScore["-5"]*-1], legendIndex: 11},
+    // series:{name: '-4', color: '#981d1d', data: [countSentiScore["-4"]*-1], legendIndex: 10},
+    // series:{name: '-3', color: '#a01c1c', data: [countSentiScore["-3"]*-1], legendIndex: 9},
+    // series:{name: '-2', color: '#bc2626', data: [countSentiScore["-2"]*-1], legendIndex: 8},
+    // series:{name: '-1', color: '#e12f2f', data: [countSentiScore["-1"]*-1]},
+    legend:{layout: "horizontal", reversed: true, enabled: true},
+      });
+    // })
+</script>
+
+
+
+<h1>Phrase Cloud</h1>
+<div id="phrase_cloud_container" style="width: 550px; height: 350px;"></div>
+<h1>Phrase Cloud Test</h1>
+<div id="phrase_cloud_container_test" style="width: 550px; height: 350px;"></div>
+
 
 <br>
 

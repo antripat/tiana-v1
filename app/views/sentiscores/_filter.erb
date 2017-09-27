@@ -1,0 +1,19 @@
+<%= form_tag sentiscores_path, :method => 'get' do %>
+<p>
+<%= date_field_tag :start_date, params[:start_date], placeholder: "Start Date", readonly: 'true'%>
+Start Date
+</p>
+<p>
+<%= date_field_tag :end_date, params[:end_date], placeholder: "End Date" , readonly: 'true' %>
+End Date
+</p>
+<p>
+<%= select_tag "teams", options_for_select(@teams_array_of_hash.map {|o| [o['name'],o['id']]},selected: @teams_array_of_hash.map {|o| o['id']}), multiple: true%>
+Select Team(s)
+</p>
+<p>
+<%= select_tag "skills", options_from_collection_for_select(@metaskills, "skillId", "skillName"), multiple: true%>
+Select Skill(s)
+</p>
+<%= submit_tag "Refresh", :name =>nil %>
+<% end %>
